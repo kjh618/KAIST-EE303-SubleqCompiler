@@ -1,0 +1,6 @@
+add a, b;
+print_int b;
+halt;
+
+a: data 42;
+b: data 7;
