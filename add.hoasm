@@ -1,4 +1,4 @@
-add a, b;
+add a, b; // b += a
 print_int b;
 halt;
 

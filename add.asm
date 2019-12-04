@@ -1,4 +1,4 @@
-// add a, b;
+// add a, b; // b += a
 subleq a, Z;
 subleq Z, b;
 subleq Z, Z;
@@ -11,10 +11,9 @@ subleq Z, Z;
 // halt;
 subleq NEG_BELL, PRINT_CHAR;
 
+
 a: data 42;
-
 b: data 7;
-
 
 Z: data 0;
 NEG_BELL: data -7;
