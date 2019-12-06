@@ -8,8 +8,8 @@ finish:
 print_int result;
 halt;
 
-a: data 42;
-b: data 7;
+a: data 7;
+b: data 9;
 result: data 0;
 
 zero: data 0;

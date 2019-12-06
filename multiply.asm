@@ -34,13 +34,13 @@ subleq _NEG_BELL, _PRINT_CHAR;
 
 // [Line 10] 
 
-// [Line 11] a: data 42;
+// [Line 11] a: data 7;
 a: 
-data 42;
-
-// [Line 12] b: data 7;
-b: 
 data 7;
+
+// [Line 12] b: data 9;
+b: 
+data 9;
 
 // [Line 13] result: data 0;
 result: 

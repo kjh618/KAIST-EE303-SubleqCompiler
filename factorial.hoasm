@@ -1,0 +1,30 @@
+loop:
+mov result, multiply_a;
+mov a, multiply_b;
+sub one, a;
+jmp multiply;
+multiply_return:
+mov multiply_result, result;
+jeq a, finish;
+jmp loop;
+
+finish:
+print_int result;
+halt;
+
+multiply:
+mov zero, multiply_result;
+multiply_loop:
+add multiply_a, multiply_result;
+sub one, multiply_b;
+jeq multiply_b, multiply_return;
+jmp multiply_loop;
+
+a: data 5;
+result: data 1;
+multiply_a: data 0;
+multiply_b: data 0;
+multiply_result: data 0;
+
+zero: data 0;
+one: data 1;
