@@ -1,21 +1,28 @@
-// add a, b; // b += a
-subleq a, Z;
-subleq Z, b;
-subleq Z, Z;
+// [Line 1] add a, b; // b += a
+subleq a, _Z;
+subleq _Z, b;
+subleq _Z, _Z;
 
-// print_int b;
-subleq b, Z;
-subleq Z, PRINT_INT;
-subleq Z, Z;
+// [Line 2] print_int b;
+subleq b, _Z;
+subleq _Z, _PRINT_INT;
+subleq _Z, _Z;
 
-// halt;
-subleq NEG_BELL, PRINT_CHAR;
+// [Line 3] halt;
+subleq _NEG_BELL, _PRINT_CHAR;
+
+// [Line 4] 
+
+// [Line 5] a: data 42;
+a: 
+data 42;
+
+// [Line 6] b: data 7;
+b: 
+data 7;
 
 
-a: data 42;
-b: data 7;
-
-Z: data 0;
-NEG_BELL: data -7;
-PRINT_INT(-2):
-PRINT_CHAR(-1):
+_Z: data 0;
+_NEG_BELL: data -7;
+_PRINT_INT(-2):
+_PRINT_CHAR(-1):

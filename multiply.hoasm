@@ -1,0 +1,16 @@
+loop:
+add a, result; // result += a
+sub one, b; // b--
+jeq b, finish; // jmp finish if b == 0
+jmp loop;
+
+finish:
+print_int result;
+halt;
+
+a: data 42;
+b: data 7;
+result: data 0;
+
+zero: data 0;
+one: data 1;
