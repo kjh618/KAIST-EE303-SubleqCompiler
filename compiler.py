@@ -34,6 +34,13 @@ class Instruction:
     def compiled(self):
         if self.is_compiled_instruction():
             return [str(self)]
+        elif self.opcode == 'mov':
+            return [
+                f'subleq {self.operands[1]}, {self.operands[1]};',
+                f'subleq {self.operands[0]}, {Z};',
+                f'subleq {Z}, {self.operands[1]};',
+                f'subleq {Z}, {Z};'
+            ]
         elif self.opcode == 'add':
             return [
                 f'subleq {self.operands[0]}, {Z};',
