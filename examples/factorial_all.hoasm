@@ -1,0 +1,73 @@
+// Main Routine
+loop:
+
+mov n, factorial_n;
+jmp factorial;
+factorial_return:
+mov factorial_result, result;
+
+// "n! = result"
+print_int n;
+print_char BANG;
+print_char SPACE;
+print_char EQUALS;
+print_char SPACE;
+print_int result;
+print_char ENTER;
+
+sub ONE, n;
+jeq n, finish;
+jmp loop;
+
+finish:
+halt;
+
+
+// Function: factorial_result = factorial(factorial_n)
+factorial:
+mov ONE, factorial_result;
+
+factorial_loop:
+
+mov factorial_result, multiply_a;
+mov factorial_n, multiply_b;
+jmp multiply;
+multiply_return:
+
+mov multiply_result, factorial_result;
+
+sub ONE, factorial_n;
+jeq factorial_n, factorial_return;
+jmp factorial_loop;
+
+
+// Function: multiply_result = multiply(multiply_a, multiply_b)
+multiply:
+mov ZERO, multiply_result;
+
+multiply_loop:
+add multiply_a, multiply_result;
+sub ONE, multiply_b;
+jeq multiply_b, multiply_return;
+jmp multiply_loop;
+
+
+// Variables
+result: data 0;
+n: data 5;
+
+factorial_n: data 0;
+factorial_result: data 0;
+
+multiply_a: data 0;
+multiply_b: data 0;
+multiply_result: data 0;
+
+
+// Constants
+ZERO: data 0;
+ONE: data 1;
+BANG: data '!';
+SPACE: data ' ';
+EQUALS: data '=';
+ENTER: data '\n';
