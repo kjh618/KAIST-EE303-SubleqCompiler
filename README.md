@@ -19,4 +19,5 @@ This will compile `code.hoasm` file and write the result to `code.asm` file.
 | `jmp c;` | jump to c |
 | `jeq b, c;` | jmp c if mem[b] == 0 |
 | `print_int a;` | print mem[a] as int |
+| `print_char a;` | print mem[a] as char |
 | `halt;` | halt program |
