@@ -68,6 +68,12 @@ class Instruction:
                 f'subleq {Z}, {PRINT_INT};',
                 f'subleq {Z}, {Z};'
             ]
+        elif self.opcode == 'print_char':
+            return [
+                f'subleq {self.operands[0]}, {Z};',
+                f'subleq {Z}, {PRINT_CHAR};',
+                f'subleq {Z}, {Z};'
+            ]
         elif self.opcode == 'halt':
             return [f'subleq {NEG_BELL}, {PRINT_CHAR};']
         else:
