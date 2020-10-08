@@ -1,12 +1,12 @@
 # Subleq Compiler
-Compiles higher-order assembly code to `subleq` instructions.
+Compiles higher-level assembly code to `subleq` instructions.
 
 
 ## Usage
 ```
->python compiler.py code.hoasm code.asm
+>python compiler.py code.hlasm code.asm
 ```
-This will compile `code.hoasm` file and write the result to `code.asm` file.
+This will compile `code.hlasm` file and write the result to `code.asm` file.
 
 
 ## Supported Instructions
