@@ -4,9 +4,9 @@ Compiles higher-level assembly code to `subleq` instructions.
 
 ## Usage
 ```
->python compiler.py code.hlasm code.asm
+>python compiler.py code.hasm code.asm
 ```
-This will compile `code.hlasm` file and write the result to `code.asm` file.
+This will compile `code.hasm` file and write the result to `code.asm` file.
 
 
 ## Supported Instructions
